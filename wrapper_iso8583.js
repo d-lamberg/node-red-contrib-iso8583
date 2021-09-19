@@ -37,7 +37,7 @@ module.exports = function(RED) {
                     msgS2 = msg.payload;
                     //console.dir( msgS2 );
                 }                
-                var packedMessageS2 = messageS2.getBufferMessage(msgS2);
+                var packedMessageS2 = messageS2(msgS2);
                 var _msg ='';
                 for (var x = 0 ; x < packedMessageS2.length ; x++) {
                     _msg = _msg + packedMessageS2[ x ];
