@@ -37,7 +37,7 @@ module.exports = function(RED) {
                     msgS2 = msg.payload;
                     //console.dir( msgS2 );
                 }                
-                var packedMessageS2 = messageS2.packSync(msgS2);
+                var packedMessageS2 = messageS2.getIsoJSON(msgS2);
                 var _msg ='';
                 for (var x = 0 ; x < packedMessageS2.length ; x++) {
                     _msg = _msg + packedMessageS2[ x ];
@@ -47,7 +47,7 @@ module.exports = function(RED) {
                 node.log( "(isString) Msg to array" );
                 var msgR = new Buffer( msgS2, "hex"); // desmonta iso8583 do texto, devolvendo array
                 var lenR = msgR.length;
-                var unpackedMessageR = messageS2.unpackSync(msgR, lenR);
+                var unpackedMessageR = messageS2.getRawMessage(msgR, lenR);
                 msg.payload = unpackedMessageR;
             }
             node.send(msg);
