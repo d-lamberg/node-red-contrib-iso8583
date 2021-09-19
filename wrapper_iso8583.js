@@ -6,7 +6,7 @@ module.exports = function(RED) {
         RED.nodes.createNode(this,config);
         var node = this;
         node.on('input', function(msg) {
-            var messageS2 = new ISO8583.Message();
+            var messageS2 = new ISO8583();
             var msgS2 = msg.payload;          
             var msgS2T =( typeof msgS2 === 'string' )
                        
