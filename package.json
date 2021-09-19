@@ -1,10 +1,10 @@
 {
-  "name": "node-red-contrib-node-iso8583_i",
+  "name": "node-red-contrib-node-iso8583",
   "version": "0.0.3",
   "license": "Apache-2.0",
   "description": "A Node-RED node that convert array into ISO8583 msg or msg txt Iso8583 into array",
   "dependencies": {
-    "iso-8583_i": "^2.6.0"
+    "iso-8583_i": "^2.6.8"
   },
   "repository": {
     "type": "git",
