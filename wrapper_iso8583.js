@@ -1,6 +1,6 @@
 module.exports = function(RED) {
     "use strict";
-    var ISO8583 = require('iso-8583_i');
+    var ISO8583 = require('iso_8583_i');
     
     function Iso8583Node(config) {
         RED.nodes.createNode(this,config);
